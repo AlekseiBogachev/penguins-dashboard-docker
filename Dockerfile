@@ -54,5 +54,6 @@ RUN poetry install
 
 RUN poetry run quarto check
 RUN poetry run quarto render penguins.qmd
+RUN rm penguins.qmd
 
 CMD ["/bin/bash", "-c", "shiny-server"]
